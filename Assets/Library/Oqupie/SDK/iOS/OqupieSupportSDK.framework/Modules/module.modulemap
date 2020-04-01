@@ -1,0 +1,6 @@
+framework module OqupieSupportSDK {
+  umbrella header "OqupieSupportSDK.h"
+
+  export *
+  module * { export * }
+}
