@@ -58,6 +58,7 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+!OqupieSupportSDK.unitypackage
 
 # Crashlytics generated file
 crashlytics-build.properties
