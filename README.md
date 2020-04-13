@@ -29,17 +29,18 @@
 
 #### 2-2. Gradle 설정
 
-- Mininum API Level은 21 이상으로, Target API Level은 28 이상으로 설정하세요
-- Custom Gradel Template을 생성하고 아래처럼 'androidx.legacy:legacy-support-v4:1.0.0' 라이브러리를 추가해 주세요
+- Mininum API Level은 21 이상으로, Target API Level은 28 이상으로 설정하세요.
+- Custom Gradel Template을 생성하고 아래처럼 'androidx.legacy:legacy-support-v4:1.0.0' 라이브러리를 추가해 주세요.
 
 ![unity build setting image](images/unity-build.png)
 
 ```gradle
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'  // 충돌 시 제거
 **DEPS**}
 ```
+참고: `support-v4` 라이브러리 충돌이 일어날 경우 해당 부분(`implementation 'androidx.legacy:legacy-support-v4:1.0.0'`)을 빼주고 빌드합니다.
 
 ### 3. iOS 플러그인 연동
 
