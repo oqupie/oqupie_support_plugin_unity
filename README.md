@@ -37,10 +37,10 @@
 ```gradle
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'  // 충돌 시 제거
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0' 
 **DEPS**}
 ```
-참고: `support-v4` 라이브러리 충돌이 일어날 경우 해당 부분(`implementation 'androidx.legacy:legacy-support-v4:1.0.0'`)을 빼주고 빌드합니다.
+참고: `support-v4` 라이브러리 충돌이 일어날 경우 적당한 버전으로 맞춘 뒤에 빌드합니다. [참고자료](https://developer.android.com/jetpack/androidx/migrate)
 
 ### 3. iOS 플러그인 연동
 
